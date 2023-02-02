@@ -11,15 +11,16 @@ const routes: Routes = [
 
   /* Componentes */
 
-  {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
+  {path: '',pathMatch: 'full', redirectTo: "/login"},
   {path: 'home', component: InicioComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
-  {path: ' ',pathMatch: 'full', redirectTo: "/login"},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 
-  /* Paginas */ 
+  /* Paginas */
 
   {path: 'productos', component: ProductosComponent},
   {path: 'descripcion', component: DescripcionComponent},
+  {path: 'inicio', component: InicioComponent},
 
 
 
