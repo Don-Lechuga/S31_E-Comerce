@@ -11,6 +11,7 @@ import { } from '@angular/compiler';
 export class DescripcionComponent implements OnInit{
 
   @Input() cantidad!:string
+  @Input() Compra = []
 
   Lproductos!:Productos[];
 
@@ -26,6 +27,6 @@ export class DescripcionComponent implements OnInit{
   }
   agregarCarrito(){
     this.cantidad
-    
+    this.Compra.push
   }
 }
