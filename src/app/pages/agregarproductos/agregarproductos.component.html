@@ -1,1 +1,49 @@
-<p>agregarproductos works!</p>
+<form [formGroup]="Fagregar">
+  <div>
+      <div class="my-3">
+          <label for="nombre">Nombre</label>
+      </div>
+      <div>
+          <input type="text" name="nombre"  class="px-4 py-2 rounded-lg" formControlName="nombre">
+      </div>
+  </div>
+  <div>
+      <div class="my-3">
+          <label for="descripcion">Descripcion</label>
+      </div>
+      <div>
+          <textarea type="text" name="descripcion" class="px-4 py-2 rounded-lg" formControlName="descripcion"></textarea>
+      </div>
+  </div>
+  <div>
+      <div class="my-3">
+          <label for="costo">Costo</label>
+      </div>
+      <div>
+          <input type="number" name="costo"  class="px-4 py-2 rounded-lg" formControlName="costo">
+      </div>
+  </div>
+  <div>
+      <div class="my-3">
+          <label for="oferta">Oferta</label>
+      </div>
+      <div>
+          <input type="number" name="oferta" class="px-4 py-2 rounded-lg" formControlName="oferta">
+      </div>
+  </div>
+  <div>
+      <div class="my-3">
+          <label for="imagen">Imagen</label>
+      </div>
+      <div>
+          <input type="text" name="imagen"class="px-4 py-2 rounded-lg" formControlName="imagen">
+      </div>
+  </div>
+
+
+
+  <div>
+      <button class="rounded-lg bg-blue-500 text-blue-900 px-6 py-2 my-6 hover:bg-blure-800 hover:text-white" (click)="onSubmit()">Registrar</button>
+  </div>
+
+</form>

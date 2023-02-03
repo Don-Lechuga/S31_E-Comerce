@@ -9,8 +9,9 @@ import { PagesModule } from './pages/pages.module';
 
 
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from './environments/environment';
+import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 var config = {
   apiKey: environment.firebase.apiKey,
@@ -30,7 +31,8 @@ var config = {
     ComponentsModule,
     PagesModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

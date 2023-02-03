@@ -6,6 +6,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { DescripcionComponent } from './pages/descripcion/descripcion.component';
+import { AgregarproductosComponent } from './pages/agregarproductos/agregarproductos.component';
 
 const routes: Routes = [
 
@@ -18,9 +19,8 @@ const routes: Routes = [
 
   /* Paginas */
 
-  {path: 'productos', component: ProductosComponent},
-  {path: 'descripcion', component: DescripcionComponent},
-  {path: 'inicio', component: InicioComponent},
+  {path: 'productos', component: AgregarproductosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
+  {path: 'descripcion', component: DescripcionComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
 
 
 

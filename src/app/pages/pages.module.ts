@@ -6,6 +6,7 @@ import { DescripcionComponent } from './descripcion/descripcion.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { EditarproductosComponent } from './editarproductos/editarproductos.component';
 import { AgregarproductosComponent } from './agregarproductos/agregarproductos.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,9 @@ import { AgregarproductosComponent } from './agregarproductos/agregarproductos.c
     AgregarproductosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     InicioComponent,
