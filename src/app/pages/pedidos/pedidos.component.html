@@ -1,1 +1,25 @@
-<p>pedidos works!</p>
+<table>
+
+  <thead>
+      <th>Nommbre</th>
+      <th>Descripcion</th>
+      <th>Costo</th>
+      <th>Descuento</th>
+      <th>Imagen</th>
+      <th>Precio Total</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let prod of Lproductos">
+          <td>{{ prod.nombre }}</td>
+          <td>{{ prod.descripcion }}</td>
+          <td>{{ 'S/.' +  prod.costo }}</td>
+          <td style="background-color: rgb(217, 134, 134);">S/. {{ prod.oferta }}</td>
+          <td><img src="{{ prod.imagen }}" alt="" width="100"></td>
+          <td>{{'S/.' + ( prod.costo - prod.oferta)}}</td>
+          <td>
+              <button class="bg-red-500 tex-white px-4 py-2 rounded-full" (click)="onClickDelete(prod)">Elilminar</button>
+          </td>
+      </tr>
+  </tbody>
+
+</table>

@@ -8,6 +8,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { DescripcionComponent } from './pages/descripcion/descripcion.component';
 import { EditarproductosComponent } from './pages/editarproductos/editarproductos.component';
 import { AgregarproductosComponent } from './pages/agregarproductos/agregarproductos.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'descripcion', component: DescripcionComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path: 'añadir', component: AgregarproductosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path: 'editar', component: EditarproductosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
+  {path: 'pedidos', component: PedidosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
 
 
 

@@ -1,17 +1,22 @@
 
-<img src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg" style="height: 40vh; width: 100vw;">
+<img src="https://juntozstgsrvproduction.blob.core.windows.net/cms-images/1940x470_1238x330_banner%20web%20juntoz%201238x33o_193071_570800.jpg" style="height: 40vh; width: 100vw;">
 
-<div class="mt-5 px-5">
-
+<div class="mt-3 px-5">
   <h1>Productos</h1>
-  <div>
-    <h5>Fruta de Temporada</h5>
-    <img src="https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/migrated/calendario-fruta.jpg" style="height: 200px; width: 250px;">
-    <p>s/. 120.00</p>
-    <button class="bg-outline-blue" (click)="addProducto()">Agregar al Carrito</button>
-    <a class="nav-link active " href="/descripcion">Ver más</a>
-  </div>
+  <div class="mt-4 d-flex">
 
+    <div class="mx-3"  *ngFor="let prod of Lproductos">
+      <h5>{{prod.nombre}}</h5>
+      <img src="{{ prod.imagen }}" alt="" width="230">
+      <div class="d-flex">
+        <p>S/.{{prod.costo}}</p>
+        <p>{{prod.oferta}}</p>
+      </div>
+      <button class="bg-outline-blue">Agregar al Carrito</button>
+      <a class="nav-link active " href="/descripcion">Ver más</a>
+    </div>
+
+  </div>
 </div>
 
 

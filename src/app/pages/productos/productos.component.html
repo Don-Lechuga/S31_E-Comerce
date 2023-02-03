@@ -1,6 +1,26 @@
 
 
+<table>
 
+  <thead>
+      <th>Nommbre</th>
+      <th>Descripcion</th>
+      <th>Costo</th>
+      <th>Descuento</th>
+      <th>Imagen</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let prod of Lproductos">
+          <td>{{ prod.nombre }}</td>
+          <td>{{ prod.descripcion }}</td>
+          <td>{{ 'S/.' +  prod.costo }}</td>
+          <td>S/. {{ prod.oferta }}</td>
+          <td><img src="{{ prod.imagen }}" alt="" width="100"></td>
+
+      </tr>
+  </tbody>
+
+</table>
 
 
 
